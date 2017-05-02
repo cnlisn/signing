@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">signing</string>
+    <array name="color">
+        <item name="RED">红</item>
+        <item name="GREEN">绿</item>
+        <item name="BLUE">蓝</item>
+        <item name="BLACK">黑</item>
+        <item name="YELLOW">黄</item>
+    </array>
+</resources>
