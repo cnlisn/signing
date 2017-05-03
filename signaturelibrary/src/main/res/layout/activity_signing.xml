@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#fff"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/ll_title"
@@ -43,39 +43,51 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/iv"
-        android:layout_width="fill_parent"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#fff"
-        />
+        android:layout_weight="1">
+
+        <SurfaceView
+            android:id="@+id/camera_show_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#fff" />
+    </FrameLayout>
 
 
     <LinearLayout
         android:id="@+id/ll"
-        android:paddingLeft="2dp"
-        android:paddingRight="2dp"
-        android:paddingBottom="2dp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp">
+
         <Button
             android:id="@+id/bt1"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="clear"
             android:text="重  写" />
+
         <ImageView
-            android:background="#fff"
             android:layout_width="2dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="#fff" />
+
         <Button
             android:id="@+id/bt"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="save"
             android:text="保存图片" />
     </LinearLayout>
